@@ -17,5 +17,23 @@ router.get("/", function(req, res){
 });
 
 router.post("/", function(req, res){
-	burger.
+	burger.create([
+		req.body.name
+	],function(){
+		res.redirect("/");
+	});
 });
+
+router.put("/:id", function(req, res){
+	var condition = "id = " + req.params.id;
+
+	console.log("condition", condition);
+
+	burger.update(condition, function() {
+		res.redirect("/");
+	});
+
+});
+
+//Export routes for server.js 
+module.exports = router;

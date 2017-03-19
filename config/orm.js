@@ -13,7 +13,7 @@ var orm = {
 	},
 	insertOne: function(table, vals, cb){
 		var queryString = "INSERT INTO " + table;
-		queryString += " (burgers) ";
+		queryString += " (burger_name) ";
 		queryString += "VALUES (";
 		queryString += "?";
 		queryString += ") ";
@@ -28,8 +28,8 @@ var orm = {
 		});
 	},
 	updateOne: function(table, condition, cb){
-		var queryString = "INSERT INTO " + table;
-		queryString += "SET devoured WHERE ";
+		var queryString = "UPDATE " + table;
+		queryString += " SET devoured = 1 WHERE ";
 		queryString += condition;
 
 		console.log(queryString);
