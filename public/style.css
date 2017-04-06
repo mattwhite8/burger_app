@@ -11,6 +11,10 @@ input {
 	color: black;
 }
 
-img {
-	height: 250px;
+#burgs {
+	background-color: #7F5F36;
+}
+
+#eaten {
+	background-color: #FFBE6B;
 }
