@@ -2,6 +2,7 @@
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
+var orm = require("./config/orm.js");
 
 var PORT = process.env.PORT || 3000;
 
@@ -25,5 +26,7 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
+
+orm.createTable();
 
 app.listen(PORT);
