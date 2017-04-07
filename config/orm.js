@@ -22,7 +22,6 @@ var orm = {
 				throw err;
 			}
 			cb(result);
-			connection.resolve();
 		});
 	},
 	insertOne: function(table, vals, cb){
@@ -39,7 +38,6 @@ var orm = {
 				throw err;
 			}
 			cb(result);
-			connection.resolve();
 		});
 	},
 	updateOne: function(table, condition, cb){
@@ -54,7 +52,6 @@ var orm = {
 				throw err;
 			}
 			cb(result);
-			connection.resolve();
 		});
 	}
 };

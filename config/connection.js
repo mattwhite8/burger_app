@@ -1,7 +1,7 @@
 //Set up MySQL Connection
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
 	host: 'us-cdbr-iron-east-03.cleardb.net',
 	user: 'bcc9817ed1b507',
 	password: '7ec12bb0',
@@ -9,11 +9,13 @@ var connection = mysql.createConnection({
 });
 
 //Make connection 
-connection.connect(function(err) {
+connection.getConnection(function(err, result) {
 	if (err) {
 		console.error("error connecting: " + err.stack);
+		connection.release();
 		return;
 	}
+	result.connect();
 	console.log("connected as id " + connection.threadID);
 });
 
