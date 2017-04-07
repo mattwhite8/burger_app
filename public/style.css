@@ -11,10 +11,31 @@ input {
 	color: black;
 }
 
+#input {
+	background-color: #38FF69;
+}
+
 #burgs {
 	background-color: #7F5F36;
 }
 
 #eaten {
 	background-color: #FFBE6B;
+}
+
+#burger-form {
+	margin-top: 20px;
+}
+
+div.container {
+	border-style: solid;
+}
+
+div.text-center > ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+div.text-center > ul > ul {
+	padding-left: 0;
 }
