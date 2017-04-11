@@ -27,6 +27,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
+// Checking to make sure that our table exists, if not create it
 orm.createTable();
 
 app.listen(PORT);

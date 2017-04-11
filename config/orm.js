@@ -1,6 +1,7 @@
 //Dependencies
 var connection = require("./connection.js");
 
+//Business logic for interacting with the database
 var orm = {
 	createTable: function(){
 		var queryString = "CREATE TABLE IF NOT EXISTS burgers (";
