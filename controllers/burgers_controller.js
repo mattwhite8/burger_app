@@ -1,3 +1,6 @@
+/* eslint-disable no-alert, no-console */
+/*eslint-env node*/
+
 var express = require("express");
 
 var router = express.Router();

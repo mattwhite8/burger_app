@@ -1,3 +1,6 @@
+/* eslint-disable no-alert, no-console */
+/*eslint-env node*/
+
 //Dependencies
 var connection = require("./connection.js");
 
@@ -10,7 +13,7 @@ var orm = {
 		queryString += "devoured BOOLEAN NOT NULL DEFAULT 0,";
 		queryString += "date TIMESTAMP);";
 
-		connection.query(queryString, function(err, result){
+		connection.query(queryString, function(err){
 			if (err) {
 				throw err;
 			}
